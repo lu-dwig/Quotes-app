@@ -1,1 +1,21 @@
-<p>quotes works!</p>
+<div class="heading">
+    <h1>
+        {{ titte | titlecase}}
+    </h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3">
+                <app-quotes-form (add)="addedquote($event)"></app-quotes-form>
+            </div>
+            <div class="col-sm-9">
+                <div class="all-cards">
+                    <div *ngfor="let quote of sortquotes let i=index" class="card" style="width: 22rem;">
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
