@@ -15,6 +15,7 @@ import { FontsComponent } from './fonts/fonts.component';
     QuotesComponent,
     QuoteDetailsComponent,
     FontsComponent
+    
   ],
   imports: [
     BrowserModule,

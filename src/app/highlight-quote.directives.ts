@@ -7,5 +7,7 @@ export class HighlightQuoteDirectives {
 
     constructor(private elem:ElementRef){
     }
-    @HostListener("click")
+    @HostListener("click") onClicks(){
+        this.textDeco("blue")
+    }
 }
