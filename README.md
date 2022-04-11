@@ -9,6 +9,8 @@ This is agular cli Quote application that displays quotes, allow the user to inp
 
 ## Live Page
 
+```https://lu-dwig.github.io/Quotes-app/```
+
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
