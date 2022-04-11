@@ -1,19 +1,20 @@
 <div class="heading">
     <h1>
-        {{ titte | titlecase }}
+        {{ tittle | titlecase }}
     </h1>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-3">
-                <app-quotes-form (add)="addedquote($event)"></app-quotes-form>
+                <app-quotes-form (add)="addedQuote($event)"></app-quotes-form>
             </div>
             <div class="col-sm-9">
                 <div class="all-cards">
-                    <div *ngfor="let quote of sortquotes let i=index" class="card" style="width: 22rem;">
+                    <div *ngFor="let quote of quotes; let i=index" class="card" style="width: 22rem;">
                         <div class="card-body">
-                            <h3 class="card-title" appHighLightQuote>{{quote.tittle}} {{quote.maxlikes}}<button (click)='displayInfo(i)' class="btn btn-info btn-sm" id="quotes button">See More</button></h3>
+                            <h1>{{ quote.author }}</h1>
+                            <h3 class="card-title" appHighLightQuote>{{quote.title}} {{quote.likes}}<button (click)='displayInfo(i)' class="btn btn-info btn-sm" id="quotes button">See More</button></h3>
                             <p class="card-title" id="paramater">{{quote.quote}}</p>
-                            <app-quotes-details *ngIf='quote.showInfo' bind-quoty='quote' (isRead)='quoteDelete($event,i)'></app-quotes-details>
+                            <app-quote-details *ngIf='quote.showInfo' bind-quoty='quote' (isRead)='quoteDelete($event,i)'></app-quote-details>
                             <span class="card-subtitle mb-2">Posted by:<span id="name">{{quote.name}}</span><span id="date">on: <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span></span>
                         </div>
                     </div>
