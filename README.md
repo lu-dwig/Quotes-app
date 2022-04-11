@@ -40,8 +40,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Installation Requirements
 * An electronic device;
- * Phone
- * computer or laptop
+    * Phone
+    * computer or laptop
  
 * Stable internet connection
 
